@@ -9,6 +9,7 @@ function login (){
         document.getElementById('clave').classList.add('error')
         alert("Debe ingresar todos los datos correctamente");
     }else{
+        localStorage.setItem('email', email);
         location.href='index.html';
     }
 }
