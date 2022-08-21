@@ -5,7 +5,9 @@ function login (){
     /* desarrollo un if que verifica si los campos estan rellenados si lo estan me redirige
     a nuestra pagina y sino nos muestra una alerta que nos avisa que no estamos ingresando los datos */
     if(usuario==="" || clave===""){
-    alert("Debe ingresar todos los datos correctamente");
+        document.getElementById('email').classList.add('error')
+        document.getElementById('clave').classList.add('error')
+        alert("Debe ingresar todos los datos correctamente");
     }else{
         location.href='index.html';
     }
