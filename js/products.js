@@ -25,7 +25,7 @@ let obtenerJSON = async url => {
                     <img src="` + data.products[i].image + `" alt="product image" class="img-thumbnail"> 
                 </div>
                 <div class="col">
-                    <div class="d-flex w-100 justify-content-between">
+                    <div class="d-flex  justify-content-between">
                         <div class="mb-1">
                             <h4>`+ data.products[i].name +` - `+data.products[i].currency +` ` +data.products[i].cost+`</h4>
                             <p> `+ data.products[i].description + `</p>
