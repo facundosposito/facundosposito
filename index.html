@@ -31,13 +31,18 @@
           </li>
           <li class="nav-item">
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Iniciar Sesion</a>
+          <!--Desarrolle un span con el nombre del usuario ingresado
+          mediante local storage-->
+          <span class="nav-link" id="CorreoDelUser"> </span>
+           <!--Desarrolle un boton para cerrar la sesion que borra
+            la información guardada en local storage-->
+          <li class="nav-item"  type="button" id="CerrarLaSesion">
+            <a class="nav-link" > Cerrar Sesión </a>
           </li>
         </ul>
       </div>
     </div>
-  </nav>
+   </nav>
   <main>
     <div class="jumbotron text-center"></div>
     <div class="album py-5 bg-light">
@@ -93,6 +98,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/index.js"></script>
   <script src="js/init.js"></script>
+  <script src="js/login.js"></script>
 </body>
 
 </html>

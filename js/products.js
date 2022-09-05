@@ -8,12 +8,16 @@ let obtenerJSON = async url => {
     const data = response.json();
     return data;
   }
-//funcion que despliega lista de productos//
-  obtenerJSON(urljson).then(data => {
-    
   
+  
+//Obtenemos todos los Json de todas las categorias de productos//
+  obtenerJSON(PRODUCTS_URL + localStorage.getItem('catID') + EXT_TYPE).then(data => {
+    
     console.log(data);
   
+    // codigo para mostrar los diferentes productos //
+  const todoslosproductos = "PRODUCTS_URL" + localStorage.getItem('catID') + "EXT_TYPE";
+
     //obtener info json y genero html -innerHTML-//
    let listaautos = ``;
     for(let i = 0; i <data.products.length; i++) {
@@ -39,9 +43,41 @@ let obtenerJSON = async url => {
             document.getElementById("cat-list-container").innerHTML = listaautos;
     }
 }
-//devolucion de errores en consola//
+
   ).catch(error => {
     console.error(error);
   });
 
+ /* Desarollo el codigo para  el punto 3 */
+ 
+ /* DESAFIATE Filtro y busqueda en tiempo real */
+
+let ProductosFiltrados = [];
+
+function FyB(){
+  let busquedarealizada = document.getElementById("BuscadorProductos").value;
+  
+  let ProductoBuscados = listado.filter( productos => {
+    return productos.toLowerCase().indexOf(busquedarealizada.toLowerCase()) > -1;
+  })
+  
+  function mostrarproductos(productos){
+   
+    
+  }
+
+  
+
+  document.getElementById('BuscadorProductos').addEventListener('keyup',()=>{
+  verificacion();
+  })
+
+}
+
+/* desarrollo codigo que lee la información del localstorage y la enviamos al html
+para que el mismo pueda mostrarnos esa informacion en la barra de navegación */
+let emailU= localStorage.getItem("EmailDelUsuario");
+
+document.getElementById('CorreoDelUser').innerHTML=emailU
+localStorage.getItem('EmailDelUsuario'); 
 
