@@ -142,6 +142,6 @@ function FyB(){
 */
 /* CODIGO PARA ENTREGA 3 */
 function productInfo(id){
-  localStorage.setItem('catID', id);
+  localStorage.setItem('IDinfoP', id);
   window.location = "product-info.html";
 }

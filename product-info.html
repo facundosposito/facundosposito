@@ -32,6 +32,18 @@
           </li>
           <li class="nav-item">
           </li>
+          <span class="dropdown" >
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="CorreoDelUser">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
+              <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
+              <li><a class="dropdown-item" href="login.html">Cerrar sesión</a></li>
+            </ul>
+          </span>
+          
+          
           <li class="nav-item">
             <a class="nav-link" href="login.html">Cerrar sesión</a>
           </li>
@@ -41,11 +53,13 @@
   </nav>
 <!-- De aca para abajo empiezo a desarrollar el codigo para mostrar el producto-->
 <main>
-<div class="container" id="mostrarProducto"> </div>
-<div class="row">
-  <div class="list-group" id="cat-list-container">
-  </div>
+<div class="container row" id="mostrarProducto"> </div>
+<div class="container row" id="mostrarComentarios"> </div>
+<div class="container row" id="ProductosRelacionados"> <h5> Productos relacionados</h5>
+
 </div>
+
+
 </main>
 <!-- De aca para arriba desarollare el codigo para mostrar el producto-->
  
@@ -70,6 +84,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
