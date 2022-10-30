@@ -31,14 +31,19 @@
           </li>
           <li class="nav-item">
           </li>
-          <!--Desarrolle un span con el nombre del usuario ingresado
-          mediante local storage-->
-          <span class="nav-link" type="button" id="CorreoDelUser"> </span>
-          
-           <!--Desarrolle un boton para cerrar la sesion que borra
-            la información guardada en local storage-->
-          <li class="nav-item"  type="button" id="CerrarLaSesion">
-            <a class="nav-link" > Cerrar Sesión </a>
+          <!--Menu desplegable a partir del usuario que inicia sesion-->
+          <span class="dropdown" >
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="CorreoDelUser">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
+              <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
+              <li><a class="dropdown-item" href="login.html">Cerrar sesión</a></li>
+            </ul>
+          </span>
+        
+
           </li>
         </ul>
       </div>
