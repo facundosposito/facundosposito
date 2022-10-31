@@ -21,7 +21,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-between">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link active" href="index.html">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="categories.html">Categorías</a>
@@ -31,19 +31,46 @@
           </li>
           <li class="nav-item">
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Cerrar sesión</a>
+          <!--Menu desplegable a partir del usuario que inicia sesion-->
+          <span class="dropdown" >
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="CorreoDelUser">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
+              <li><a class="dropdown-item" href="login.html">Cerrar sesión</a></li>
+            </ul>
+          </span>
+        
+
           </li>
         </ul>
       </div>
     </div>
-  </nav>
+   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
-    </div>
+    <h1>Productos </h1>
+    <table class="table"> 
+        <th>Producto</th><th>Precio (USD)</th><th>Cantidad</th><th>Subtotal (USD)</th>
+        <tbody id="mostrarinfocarrito">
+        </tbody>
+        <th>Tipo de envio</th>
+    </table>
+    <p><label><input type="checkbox" name="premium"> Premium 2 a 5 días (15%)</label></p>
+    <p><label><input type="checkbox" name="express"> Express 5 a 8 días (7%)</label></p>
+    <p><label><input type="checkbox" name="standar"> Standar 12 a 15 días (7%)</label></p>
+    <table class="table"> 
+      <th>Dirección de envio</th>
+    </table>
+    <table class="table"> 
+      <th>Calle <br> <input type ="text"> 
+    </table>
+    <table class="table"> 
+      </th><th>Numero <br></bs><input type ="text"></th>
+    </table>
+    <table class="table"> 
+    <th>Esquina <br><input type ="text"></th> 
+  </table>
   </main>
   <footer class="text-muted">
     <div class="container">
@@ -66,6 +93,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/cart.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
