@@ -97,7 +97,7 @@ function validacioncompra (){
   })()
 }
 
-document.getElementById("botoncompra").addEventListener("click", ()=>{
+document.getElementById("botonguardar").addEventListener("click", ()=>{
     validacioncompra()
 })
 
