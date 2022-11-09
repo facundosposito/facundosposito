@@ -23,6 +23,9 @@
         font-size: 3.5rem;
       }
     }
+    #containerperfil{
+      width: 800px;
+    }
   </style>
 </head>
 
@@ -46,19 +49,63 @@
           </li>
           <li class="nav-item">
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Cerrar sesión</a>
-          </li>
+         <!--Menu desplegable a partir del usuario que inicia sesion-->
+         <span class="dropdown" >
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+            Mi cuenta
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
+            <li><a class="dropdown-item" href="login.html">Cerrar sesión</a></li>
+          </ul>
+         </span>
         </ul>
       </div>
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+    <div id="containerperfil" class="container">
+      <form class="needs-validation" novalidate>
+      <div>
+        <table class="table"> 
+          <h3>Perfil</h3>
+        </table>
+        <table class="table"> 
+          <th>Primer nombre* <br> <input id="primernombre" class="form-control" type ="text" required>
+            <div class="invalid-feedback">
+              Ingrese su nombre.
+            </div> 
+        </table>
+        <table class="table"> 
+          <th>Segundo Nombre <br><input id="segundonombre" class="form-control" type ="text">
+        </table>
+        <table class="table"> 
+         <th>Primer apellido* <br><input id="primerapellido" class="form-control" type ="text" required>
+          <div class="invalid-feedback">
+            Ingrese su primer apellido.
+          </div> 
+        </table>
+        <table class="table"> 
+          <th>Segundo apellido* <br><input id="segundoapellido" class="form-control" type ="text" required>
+           <div class="invalid-feedback">
+             Ingrese su segundo apellido.
+           </div> 
+         </table>
+         <table class="table"> 
+          <th>E-mail :  <p id="CorreoDelUser"> </p>
+         </table>
+         <table class="table"> 
+          <th>Telefono de contacto <br><input id="telefono" class="form-control" type ="number">
+           <div class="invalid-feedback">
+             Ingrese su telefono de contacto
+           </div> 
+         </table>
+          <div>
+            <button class="btn btn-primary" type="submit" id="botonguardar">Guardar cambios</button>
+          </div>
       </div>
     </div>
+  </form>
   </main>
   <footer class="text-muted">
     <div class="container">
@@ -73,6 +120,8 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/my-profile.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/login.js"></script>
 </body>
 
 </html>
