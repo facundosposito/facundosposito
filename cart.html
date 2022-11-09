@@ -10,7 +10,14 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 </head>
-
+<style>
+  #envios{
+    margin-left: 10px;
+  }
+  #divformapago{
+    margin-left: 30px;
+  }
+</style>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
     <div class="container">
@@ -52,24 +59,98 @@
     <h1>Productos </h1>
     <table class="table"> 
         <th>Producto</th><th>Precio (USD)</th><th>Cantidad</th><th>Subtotal (USD)</th>
-        <tbody id="mostrarinfocarrito">
-        </tbody>
-        <th>Tipo de envio</th>
+          <tbody id="mostrarinfocarrito">
+          </tbody>
+        <h3>Tipo de envio</h3>
     </table>
-    <p><label><input type="checkbox" name="premium"> Premium 2 a 5 días (15%)</label></p>
-    <p><label><input type="checkbox" name="express"> Express 5 a 8 días (7%)</label></p>
-    <p><label><input type="checkbox" name="standar"> Standar 12 a 15 días (7%)</label></p>
+      <div id="envios">
+        <p><label><input id="premium" type="radio" value="0.15" name="envio"> Premium 2 a 5 días (15%) </label></p>
+        <p><label><input id="express" type="radio" value="0.07" name="envio"> Express 5 a 8 días (7%)</label></p>
+        <p><label><input id="standar" type="radio" value="0.05" name="envio" checked> Standar 12 a 15 días (5%)</label></p>
+      </div>
+      <form class="needs-validation" novalidate>
     <table class="table"> 
-      <th>Dirección de envio</th>
-    </table>
-    <table class="table"> 
-      <th>Calle <br> <input type ="text"> 
-    </table>
-    <table class="table"> 
-      </th><th>Numero <br></bs><input type ="text"></th>
+      <h3>Dirección de envio</h3>
     </table>
     <table class="table"> 
-    <th>Esquina <br><input type ="text"></th> 
+      <th>Calle <br> <input class="form-control" type ="text" required>
+        <div class="invalid-feedback">
+          Ingrese una calle
+        </div> 
+    </table>
+    <table class="table"> 
+      <th>Numero <br><input class="form-control" type ="text" required>
+      <div class="invalid-feedback">
+        Ingrese un numero de puerta
+      </div> 
+    </table>
+    <table class="table"> 
+     <th>Esquina <br><input class="form-control" type ="text" required>
+      <div class="invalid-feedback">
+        Ingrese una esquina 
+      </div> 
+    </table>
+  
+  <table class="table" id="formapago">
+    <th><h3>Costos</h3></th>
+     <div > 
+          <table class="table" >
+              Subtotal <br><p>Costo unitario del producto por cantidad <b class="float-end" id="subtotal2"> </b></p>
+          </table>
+     </div> 
+      <table class="table">
+        Costo de envio <br><p>Segun el tipo de envio <b class="float-end" id="costoenvio"> </b></p>
+       </table>
+       <table class="table">
+        Total ($) <b class="float-end" id="total"> </b>
+       </table>
+       
+       <div>
+        <th><h3>Forma de pago</h3></th>
+        <button type="button"  class="btn btn-link ps-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Seleccionar
+        </button>
+       </div>
+
+       <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Forma de pago</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p><label><input id="credito" type="radio"  name="formadepago"> Tarjeta de credito </label></p>
+                
+                <div class="row">
+                  <table class="table"  > 
+                    <th>Numero de Tarjeta <br> <input id="numtarj" class="form-control" type ="number" required> 
+                  </table>
+                  <table class="table"> 
+                    <th>Codigo de Seg <br> <input id="codseg" class="form-control" type ="number" required> 
+                 </table>
+                 <table class="table"> 
+                  <th>Vencimiento <br> <input id="ventarj" class="form-control" type ="date" required> 
+               </table>
+                </div>
+                <p><label><input id="transferencia" type="radio"  name="formadepago"> Transferencia bancaria </label></p>
+                <table class="table"> 
+                  <th>Numero de cuenta <br> <input id="imputtransferencia" class="form-control" type ="number" required> 
+               </table>
+            </div>
+              <div class="modal-footer">
+                
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" >Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       <div>
+        <button class="btn btn-primary" type="submit" id="botoncompra">Finalizar Compra</button>
+      </div>
+    </form>
   </table>
   </main>
   <footer class="text-muted">
